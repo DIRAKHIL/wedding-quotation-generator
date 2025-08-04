@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to parse CSV data
     async function parseCSV() {
         try {
-            const response = await fetch('Ashok wedding quote - 2.csv');
+            const response = await fetch('Ashok%20wedding%20quote%20-%202.csv');
             const csvText = await response.text();
             const rows = csvText.split('\n').map(row => row.split(','));
             
