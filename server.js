@@ -35,7 +35,7 @@ const server = http.createServer((req, res) => {
     // Normalize URL
     let url = req.url;
     if (url === '/') {
-        url = '/index-v2.html'; // Use the v2 version as preferred by the user
+        url = '/index-v3.html'; // Use the v3 version as shown in the screenshot
     }
     
     // Get file path

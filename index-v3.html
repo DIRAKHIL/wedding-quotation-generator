@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sumuhurtham | Professional Wedding Photography Quotation</title>
     <link rel="stylesheet" href="styles-v3.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -16,38 +16,43 @@
                 <img src="logo.png" alt="Sumuhurtham Logo">
                 <div>
                     <h1>Sumuhurtham</h1>
-                    <p>Professional Wedding Photography</p>
+                    <p>We Make Memories...</p>
                 </div>
             </div>
-            <div class="nav-actions">
-                <button id="save-btn" class="btn btn-outline"><i class="fas fa-save"></i> Save</button>
-                <button id="load-btn" class="btn btn-outline"><i class="fas fa-folder-open"></i> Load</button>
-                <button id="generate-btn" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Generate Quote</button>
+            <div class="nav-info">
+                <p><i class="fas fa-camera"></i> Experienced, Creative & Professional Photographers</p>
+                <p><i class="fas fa-map-marker-alt"></i> Hyderabad | With Over 10 Years of Experience</p>
+                <p><i class="fas fa-phone"></i> Contact: +91 XXXXXXXXXX</p>
             </div>
         </nav>
 
         <!-- Main Content -->
         <main class="main-content">
-            <!-- Progress Indicator -->
-            <div class="progress-bar">
-                <div class="progress-step active" data-step="client">
-                    <div class="step-number">1</div>
-                    <div class="step-label">Client Info</div>
+            <!-- Sidebar Navigation -->
+            <div class="sidebar">
+                <div class="sidebar-item active">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Client Info</span>
                 </div>
-                <div class="progress-connector"></div>
-                <div class="progress-step" data-step="events">
-                    <div class="step-number">2</div>
-                    <div class="step-label">Events</div>
+                <div class="sidebar-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Event Selection</span>
                 </div>
-                <div class="progress-connector"></div>
-                <div class="progress-step" data-step="services">
-                    <div class="step-number">3</div>
-                    <div class="step-label">Services</div>
+                <div class="sidebar-item">
+                    <i class="fas fa-camera"></i>
+                    <span>Service Configuration</span>
                 </div>
-                <div class="progress-connector"></div>
-                <div class="progress-step" data-step="summary">
-                    <div class="step-number">4</div>
-                    <div class="step-label">Summary</div>
+                <div class="sidebar-item">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Additional Services</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fas fa-box"></i>
+                    <span>Package Details</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fas fa-save"></i>
+                    <span>Saved Quotes</span>
                 </div>
             </div>
 
@@ -57,43 +62,37 @@
                 <section class="form-section active" id="client-section">
                     <div class="section-header">
                         <h2><i class="fas fa-user-circle"></i> Client Information</h2>
-                        <p>Enter the client's details for the quotation</p>
                     </div>
                     
                     <div class="form-grid">
                         <div class="form-group">
-                            <label for="client-name">Client Name</label>
-                            <input type="text" id="client-name" placeholder="Enter client's full name">
+                            <label for="client-name">Client Name:</label>
+                            <input type="text" id="client-name" placeholder="Enter client name">
                         </div>
                         
                         <div class="form-group">
-                            <label for="client-phone">Phone Number</label>
+                            <label for="client-phone">Phone Number:</label>
                             <input type="tel" id="client-phone" placeholder="Enter phone number">
                         </div>
                         
                         <div class="form-group">
-                            <label for="client-email">Email Address</label>
+                            <label for="client-email">Email:</label>
                             <input type="email" id="client-email" placeholder="Enter email address">
                         </div>
                         
                         <div class="form-group">
-                            <label for="event-location">Event Location</label>
-                            <input type="text" id="event-location" placeholder="Enter primary location" value="Nellore">
+                            <label for="event-location">Event Location:</label>
+                            <input type="text" id="event-location" placeholder="Enter location" value="Nellore">
                         </div>
                         
                         <div class="form-group">
-                            <label for="wedding-date">Wedding Date</label>
+                            <label for="wedding-date">Wedding Date:</label>
                             <input type="date" id="wedding-date">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="client-address">Address</label>
-                            <textarea id="client-address" placeholder="Enter client's address"></textarea>
                         </div>
                     </div>
                     
                     <div class="form-actions">
-                        <button class="btn btn-primary next-btn" data-next="events">Continue to Events <i class="fas fa-arrow-right"></i></button>
+                        <button class="btn btn-primary next-btn" data-next="events">Next: Event Selection <i class="fas fa-arrow-right"></i></button>
                     </div>
                 </section>
 
