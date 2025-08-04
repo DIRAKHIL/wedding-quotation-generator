@@ -75,7 +75,9 @@ function setEventDates(weddingDate) {
     document.getElementById('haldi-groom-date').valueAsDate = haldiDate;
     
     // Wedding
-    document.getElementById('wedding-event-date').valueAsDate = new Date(weddingDate);
+    if (document.getElementById('wedding-event-date')) {
+        document.getElementById('wedding-event-date').valueAsDate = new Date(weddingDate);
+    }
     
     // Reception (same day as wedding)
     document.getElementById('reception-date').valueAsDate = new Date(weddingDate);
@@ -242,6 +244,21 @@ function updateServiceTabs() {
     eventTabs.innerHTML = '';
     servicesContent.innerHTML = '';
     
+    // Check if we need to update selectedEvents based on checkboxes
+    const eventCheckboxes = document.querySelectorAll('.event-checkbox');
+    if (selectedEvents.length === 0 && eventCheckboxes.length > 0) {
+        // Initialize selectedEvents from checkboxes
+        eventCheckboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+                const eventId = checkbox.getAttribute('data-event');
+                const defaultEvent = defaultEvents.find(event => event.id === eventId);
+                if (defaultEvent) {
+                    selectedEvents.push({...defaultEvent});
+                }
+            }
+        });
+    }
+    
     // Add tabs and content for each selected event
     selectedEvents.forEach((event, index) => {
         // Create tab
@@ -331,7 +348,7 @@ function updateServiceTabs() {
     
     // If no events are selected, show a message
     if (selectedEvents.length === 0) {
-        eventTabs.innerHTML = '<div class="no-events-message">No events selected. Please go back and select at least one event.</div>';
+        servicesContent.innerHTML = '<div class="no-events-message">No events selected. Please go back and select at least one event.</div>';
     }
 }
 
