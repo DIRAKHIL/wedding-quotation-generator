@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumuhurtham | Professional Wedding Photography Quotation</title>
+    <link rel="stylesheet" href="styles-v3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Navigation -->
+        <nav class="top-nav">
+            <div class="logo">
+                <img src="logo.png" alt="Sumuhurtham Logo">
+                <div>
+                    <h1>Sumuhurtham</h1>
+                    <p>Professional Wedding Photography</p>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button id="save-btn" class="btn btn-outline"><i class="fas fa-save"></i> Save</button>
+                <button id="load-btn" class="btn btn-outline"><i class="fas fa-folder-open"></i> Load</button>
+                <button id="generate-btn" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Generate Quote</button>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Progress Indicator -->
+            <div class="progress-bar">
+                <div class="progress-step active" data-step="client">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Client Info</div>
+                </div>
+                <div class="progress-connector"></div>
+                <div class="progress-step" data-step="events">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Events</div>
+                </div>
+                <div class="progress-connector"></div>
+                <div class="progress-step" data-step="services">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Services</div>
+                </div>
+                <div class="progress-connector"></div>
+                <div class="progress-step" data-step="summary">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Summary</div>
+                </div>
+            </div>
+
+            <!-- Form Sections -->
+            <div class="form-container">
+                <!-- Client Info Section -->
+                <section class="form-section active" id="client-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-user-circle"></i> Client Information</h2>
+                        <p>Enter the client's details for the quotation</p>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="client-name">Client Name</label>
+                            <input type="text" id="client-name" placeholder="Enter client's full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="client-phone">Phone Number</label>
+                            <input type="tel" id="client-phone" placeholder="Enter phone number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="client-email">Email Address</label>
+                            <input type="email" id="client-email" placeholder="Enter email address">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="event-location">Event Location</label>
+                            <input type="text" id="event-location" placeholder="Enter primary location" value="Nellore">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="wedding-date">Wedding Date</label>
+                            <input type="date" id="wedding-date">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="client-address">Address</label>
+                            <textarea id="client-address" placeholder="Enter client's address"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button class="btn btn-primary next-btn" data-next="events">Continue to Events <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </section>
+
+                <!-- Events Section -->
+                <section class="form-section" id="events-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-calendar-alt"></i> Event Selection</h2>
+                        <p>Select the events you want to include in your package</p>
+                    </div>
+                    
+                    <div class="events-container">
+                        <div class="event-item">
+                            <div class="event-header">
+                                <div class="event-icon"><i class="fas fa-ring"></i></div>
+                                <div class="event-title">Engagement</div>
+                                <div class="event-toggle">
+                                    <label class="switch">
+                                        <input type="checkbox" class="event-checkbox" data-event="engagement" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="event-details">
+                                <div class="event-date-time">
+                                    <div class="form-group">
+                                        <label>Date</label>
+                                        <input type="date" id="engagement-date" class="event-date">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Time</label>
+                                        <select id="engagement-time" class="event-time">
+                                            <option value="Morning">Morning</option>
+                                            <option value="Evening">Evening</option>
+                                            <option value="Full Day">Full Day</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="event-item">
+                            <div class="event-header">
+                                <div class="event-icon"><i class="fas fa-spa"></i></div>
+                                <div class="event-title">Haldi @ Bride</div>
+                                <div class="event-toggle">
+                                    <label class="switch">
+                                        <input type="checkbox" class="event-checkbox" data-event="haldi-bride" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="event-details">
+                                <div class="event-date-time">
+                                    <div class="form-group">
+                                        <label>Date</label>
+                                        <input type="date" id="haldi-bride-date" class="event-date">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Time</label>
+                                        <select id="haldi-bride-time" class="event-time">
+                                            <option value="Morning" selected>Morning</option>
+                                            <option value="Evening">Evening</option>
+                                            <option value="Full Day">Full Day</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="event-item">
+                            <div class="event-header">
+                                <div class="event-icon"><i class="fas fa-spa"></i></div>
+                                <div class="event-title">Haldi @ Groom</div>
+                                <div class="event-toggle">
+                                    <label class="switch">
+                                        <input type="checkbox" class="event-checkbox" data-event="haldi-groom" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="event-details">
+                                <div class="event-date-time">
+                                    <div class="form-group">
+                                        <label>Date</label>
+                                        <input type="date" id="haldi-groom-date" class="event-date">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Time</label>
+                                        <select id="haldi-groom-time" class="event-time">
+                                            <option value="Morning" selected>Morning</option>
+                                            <option value="Evening">Evening</option>
+                                            <option value="Full Day">Full Day</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="event-item">
+                            <div class="event-header">
+                                <div class="event-icon"><i class="fas fa-heart"></i></div>
+                                <div class="event-title">Wedding</div>
+                                <div class="event-toggle">
+                                    <label class="switch">
+                                        <input type="checkbox" class="event-checkbox" data-event="wedding" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="event-details">
+                                <div class="event-date-time">
+                                    <div class="form-group">
+                                        <label>Date</label>
+                                        <input type="date" id="wedding-event-date" class="event-date">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Time</label>
+                                        <select id="wedding-time" class="event-time">
+                                            <option value="Morning" selected>Morning</option>
+                                            <option value="Evening">Evening</option>
+                                            <option value="Full Day">Full Day</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="event-item">
+                            <div class="event-header">
+                                <div class="event-icon"><i class="fas fa-glass-cheers"></i></div>
+                                <div class="event-title">Reception</div>
+                                <div class="event-toggle">
+                                    <label class="switch">
+                                        <input type="checkbox" class="event-checkbox" data-event="reception" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="event-details">
+                                <div class="event-date-time">
+                                    <div class="form-group">
+                                        <label>Date</label>
+                                        <input type="date" id="reception-date" class="event-date">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Time</label>
+                                        <select id="reception-time" class="event-time">
+                                            <option value="Morning">Morning</option>
+                                            <option value="Evening" selected>Evening</option>
+                                            <option value="Full Day">Full Day</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="event-item add-event">
+                            <div class="event-header">
+                                <div class="event-icon"><i class="fas fa-plus"></i></div>
+                                <div class="event-title">Add Custom Event</div>
+                                <div class="event-toggle">
+                                    <button class="btn btn-sm btn-outline" id="add-event-btn">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button class="btn btn-outline prev-btn" data-prev="client"><i class="fas fa-arrow-left"></i> Back</button>
+                        <button class="btn btn-primary next-btn" data-next="services">Continue to Services <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </section>
+
+                <!-- Services Section -->
+                <section class="form-section" id="services-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-camera"></i> Service Configuration</h2>
+                        <p>Configure services for each selected event</p>
+                    </div>
+                    
+                    <div class="services-container">
+                        <div class="services-tabs">
+                            <div class="tab-list" id="event-tabs">
+                                <!-- Event tabs will be generated dynamically -->
+                            </div>
+                            
+                            <div class="tab-content" id="services-content">
+                                <!-- Service content will be generated dynamically -->
+                            </div>
+                        </div>
+                        
+                        <div class="additional-services">
+                            <h3>Additional Services</h3>
+                            
+                            <div class="service-options">
+                                <div class="service-option">
+                                    <div class="service-option-header">
+                                        <div class="service-icon"><i class="fas fa-book"></i></div>
+                                        <div class="service-title">Premium Albums</div>
+                                        <div class="service-toggle">
+                                            <label class="switch">
+                                                <input type="checkbox" class="service-checkbox" data-service="albums" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="service-details">
+                                        <p>100 sheets for groom + 100 sheets for bride</p>
+                                        <div class="price-control">
+                                            <label>Price:</label>
+                                            <input type="number" class="service-price" value="25000" min="0" step="1000">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-option">
+                                    <div class="service-option-header">
+                                        <div class="service-icon"><i class="fas fa-film"></i></div>
+                                        <div class="service-title">Full Length Videos</div>
+                                        <div class="service-toggle">
+                                            <label class="switch">
+                                                <input type="checkbox" class="service-checkbox" data-service="videos" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="service-details">
+                                        <p>Full length videos for all events</p>
+                                        <div class="price-control">
+                                            <label>Price:</label>
+                                            <input type="number" class="service-price" value="30000" min="0" step="1000">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-option">
+                                    <div class="service-option-header">
+                                        <div class="service-icon"><i class="fas fa-camera"></i></div>
+                                        <div class="service-title">Pre/Post Wedding Shoot</div>
+                                        <div class="service-toggle">
+                                            <label class="switch">
+                                                <input type="checkbox" class="service-checkbox" data-service="prewedding" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="service-details">
+                                        <p>Complimentary pre or post wedding photoshoot</p>
+                                        <div class="price-control">
+                                            <label>Price:</label>
+                                            <input type="number" class="service-price" value="20000" min="0" step="1000">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-option">
+                                    <div class="service-option-header">
+                                        <div class="service-icon"><i class="fas fa-envelope"></i></div>
+                                        <div class="service-title">Invitations</div>
+                                        <div class="service-toggle">
+                                            <label class="switch">
+                                                <input type="checkbox" class="service-checkbox" data-service="invitations" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="service-details">
+                                        <p>Invitations for Engagement, Wedding and Reception</p>
+                                        <div class="price-control">
+                                            <label>Price:</label>
+                                            <input type="number" class="service-price" value="15000" min="0" step="1000">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-option">
+                                    <div class="service-option-header">
+                                        <div class="service-icon"><i class="fas fa-video"></i></div>
+                                        <div class="service-title">Promo Videos</div>
+                                        <div class="service-toggle">
+                                            <label class="switch">
+                                                <input type="checkbox" class="service-checkbox" data-service="promos" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="service-details">
+                                        <p>Promo videos for all selected events</p>
+                                        <div class="price-control">
+                                            <label>Price:</label>
+                                            <input type="number" class="service-price" value="40000" min="0" step="1000">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-option add-service">
+                                    <div class="service-option-header">
+                                        <div class="service-icon"><i class="fas fa-plus"></i></div>
+                                        <div class="service-title">Add Custom Service</div>
+                                        <div class="service-toggle">
+                                            <button class="btn btn-sm btn-outline" id="add-service-btn">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button class="btn btn-outline prev-btn" data-prev="events"><i class="fas fa-arrow-left"></i> Back</button>
+                        <button class="btn btn-primary next-btn" data-next="summary">Continue to Summary <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </section>
+
+                <!-- Summary Section -->
+                <section class="form-section" id="summary-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-clipboard-list"></i> Package Summary</h2>
+                        <p>Review your package details before generating the quotation</p>
+                    </div>
+                    
+                    <div class="summary-container">
+                        <div class="summary-card">
+                            <div class="summary-card-header">
+                                <h3><i class="fas fa-user"></i> Client Information</h3>
+                            </div>
+                            <div class="summary-card-body">
+                                <div class="summary-item">
+                                    <div class="summary-label">Name:</div>
+                                    <div class="summary-value" id="summary-client-name">-</div>
+                                </div>
+                                <div class="summary-item">
+                                    <div class="summary-label">Phone:</div>
+                                    <div class="summary-value" id="summary-client-phone">-</div>
+                                </div>
+                                <div class="summary-item">
+                                    <div class="summary-label">Email:</div>
+                                    <div class="summary-value" id="summary-client-email">-</div>
+                                </div>
+                                <div class="summary-item">
+                                    <div class="summary-label">Location:</div>
+                                    <div class="summary-value" id="summary-event-location">-</div>
+                                </div>
+                                <div class="summary-item">
+                                    <div class="summary-label">Wedding Date:</div>
+                                    <div class="summary-value" id="summary-wedding-date">-</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="summary-card">
+                            <div class="summary-card-header">
+                                <h3><i class="fas fa-calendar-alt"></i> Selected Events</h3>
+                            </div>
+                            <div class="summary-card-body">
+                                <div class="summary-list" id="summary-events-list">
+                                    <!-- Will be populated dynamically -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="summary-card">
+                            <div class="summary-card-header">
+                                <h3><i class="fas fa-camera"></i> Selected Services</h3>
+                            </div>
+                            <div class="summary-card-body">
+                                <div class="summary-list" id="summary-services-list">
+                                    <!-- Will be populated dynamically -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="summary-card">
+                            <div class="summary-card-header">
+                                <h3><i class="fas fa-info-circle"></i> Additional Information</h3>
+                            </div>
+                            <div class="summary-card-body">
+                                <div class="form-group">
+                                    <label for="custom-notes">Custom Notes</label>
+                                    <textarea id="custom-notes" placeholder="Add any custom notes for this quotation"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="summary-card total-card">
+                            <div class="summary-card-header">
+                                <h3><i class="fas fa-rupee-sign"></i> Package Cost</h3>
+                            </div>
+                            <div class="summary-card-body">
+                                <div class="total-container">
+                                    <div class="form-group">
+                                        <label for="package-cost">Total Package Cost (₹)</label>
+                                        <input type="text" id="package-cost" value="3,50,000">
+                                    </div>
+                                    <p class="cost-note">(Including transport within city limits)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button class="btn btn-outline prev-btn" data-prev="services"><i class="fas fa-arrow-left"></i> Back</button>
+                        <button class="btn btn-primary" id="generate-quote-btn"><i class="fas fa-file-invoice"></i> Generate Quotation</button>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Quotation Output -->
+        <div id="quotation-output" class="quotation-output hidden">
+            <div class="quotation-actions">
+                <button id="print-quote-btn" class="btn btn-primary"><i class="fas fa-print"></i> Print</button>
+                <button id="download-pdf-btn" class="btn btn-primary"><i class="fas fa-file-pdf"></i> Download PDF</button>
+                <button id="back-to-form-btn" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Form</button>
+            </div>
+            <div id="quotation-content" class="quotation-content">
+                <!-- Quotation will be generated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Add Custom Event Modal -->
+    <div class="modal" id="add-event-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add Custom Event</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="custom-event-name">Event Name</label>
+                    <input type="text" id="custom-event-name" placeholder="Enter event name">
+                </div>
+                <div class="form-group">
+                    <label for="custom-event-icon">Icon</label>
+                    <select id="custom-event-icon">
+                        <option value="fas fa-star">Star</option>
+                        <option value="fas fa-music">Music</option>
+                        <option value="fas fa-utensils">Food</option>
+                        <option value="fas fa-gift">Gift</option>
+                        <option value="fas fa-bell">Bell</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="custom-event-date">Date</label>
+                    <input type="date" id="custom-event-date">
+                </div>
+                <div class="form-group">
+                    <label for="custom-event-time">Time</label>
+                    <select id="custom-event-time">
+                        <option value="Morning">Morning</option>
+                        <option value="Evening">Evening</option>
+                        <option value="Full Day">Full Day</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline close-modal-btn">Cancel</button>
+                <button class="btn btn-primary" id="save-event-btn">Add Event</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Custom Service Modal -->
+    <div class="modal" id="add-service-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add Custom Service</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="custom-service-name">Service Name</label>
+                    <input type="text" id="custom-service-name" placeholder="Enter service name">
+                </div>
+                <div class="form-group">
+                    <label for="custom-service-description">Description</label>
+                    <textarea id="custom-service-description" placeholder="Enter service description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="custom-service-price">Price (₹)</label>
+                    <input type="number" id="custom-service-price" placeholder="Enter price" min="0" step="1000">
+                </div>
+                <div class="form-group">
+                    <label for="custom-service-icon">Icon</label>
+                    <select id="custom-service-icon">
+                        <option value="fas fa-star">Star</option>
+                        <option value="fas fa-camera">Camera</option>
+                        <option value="fas fa-video">Video</option>
+                        <option value="fas fa-image">Image</option>
+                        <option value="fas fa-palette">Design</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline close-modal-btn">Cancel</button>
+                <button class="btn btn-primary" id="save-service-btn">Add Service</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Save Quotation Modal -->
+    <div class="modal" id="save-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Save Quotation</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="save-quote-name">Quotation Name</label>
+                    <input type="text" id="save-quote-name" placeholder="Enter a name for this quotation">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline close-modal-btn">Cancel</button>
+                <button class="btn btn-primary" id="confirm-save-btn">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load Quotation Modal -->
+    <div class="modal" id="load-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Load Quotation</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="saved-quotes-list" id="saved-quotes-list">
+                    <!-- Will be populated dynamically -->
+                    <p class="no-quotes-message">No saved quotations found.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline close-modal-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script-v3.js"></script>
+</body>
+</html>

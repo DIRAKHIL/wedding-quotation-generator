@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumuhurtham - Wedding Photography & Videography Quotation</title>
+    <link rel="stylesheet" href="styles-v2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="logo.png" alt="Sumuhurtham Logo" class="logo">
+                <div class="logo-text">
+                    <h1>Sumuhurtham</h1>
+                    <p class="tagline">We Make Memories...</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <p><i class="fas fa-camera"></i> Experienced, Creative & Professional Photographers</p>
+                <p><i class="fas fa-map-marker-alt"></i> Hyderabad | With Over 10 Years of Experience</p>
+                <p><i class="fas fa-phone"></i> Contact: <span id="contact-number">+91 XXXXXXXXXX</span></p>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- Sidebar Navigation -->
+            <div class="sidebar">
+                <ul class="nav-tabs">
+                    <li class="nav-item active" data-tab="client-info">
+                        <i class="fas fa-user"></i> Client Info
+                    </li>
+                    <li class="nav-item" data-tab="event-selection">
+                        <i class="fas fa-calendar-alt"></i> Event Selection
+                    </li>
+                    <li class="nav-item" data-tab="service-config">
+                        <i class="fas fa-cog"></i> Service Configuration
+                    </li>
+                    <li class="nav-item" data-tab="additional-services">
+                        <i class="fas fa-plus-circle"></i> Additional Services
+                    </li>
+                    <li class="nav-item" data-tab="package-details">
+                        <i class="fas fa-box"></i> Package Details
+                    </li>
+                    <li class="nav-item" data-tab="saved-quotes">
+                        <i class="fas fa-save"></i> Saved Quotes
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="content-area">
+                <!-- Client Information Tab -->
+                <div class="tab-content active" id="client-info">
+                    <h2><i class="fas fa-user"></i> Client Information</h2>
+                    <div class="form-group">
+                        <label for="client-name">Client Name:</label>
+                        <input type="text" id="client-name" placeholder="Enter client name">
+                    </div>
+                    <div class="form-group">
+                        <label for="client-phone">Phone Number:</label>
+                        <input type="text" id="client-phone" placeholder="Enter phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="client-email">Email:</label>
+                        <input type="email" id="client-email" placeholder="Enter email address">
+                    </div>
+                    <div class="form-group">
+                        <label for="event-location">Event Location:</label>
+                        <input type="text" id="event-location" placeholder="Enter event location" value="Nellore">
+                    </div>
+                    <div class="form-group">
+                        <label for="wedding-date">Wedding Date:</label>
+                        <input type="date" id="wedding-date">
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn-primary next-tab" data-next="event-selection">Next: Event Selection <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Event Selection Tab -->
+                <div class="tab-content" id="event-selection">
+                    <h2><i class="fas fa-calendar-alt"></i> Event Selection</h2>
+                    <p class="tab-description">Select the events you want to include in your package:</p>
+                    
+                    <div class="event-selection-container">
+                        <div class="event-card" data-event="engagement">
+                            <div class="event-card-header">
+                                <i class="fas fa-ring"></i>
+                                <h3>Engagement</h3>
+                            </div>
+                            <div class="event-card-body">
+                                <p>Traditional ceremony where the couple exchanges rings</p>
+                            </div>
+                            <div class="event-card-footer">
+                                <label class="toggle">
+                                    <input type="checkbox" class="event-toggle" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="event-card" data-event="haldi-bride">
+                            <div class="event-card-header">
+                                <i class="fas fa-spa"></i>
+                                <h3>Haldi @ Bride</h3>
+                            </div>
+                            <div class="event-card-body">
+                                <p>Traditional ceremony where turmeric paste is applied to the bride</p>
+                            </div>
+                            <div class="event-card-footer">
+                                <label class="toggle">
+                                    <input type="checkbox" class="event-toggle" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="event-card" data-event="haldi-groom">
+                            <div class="event-card-header">
+                                <i class="fas fa-spa"></i>
+                                <h3>Haldi @ Groom</h3>
+                            </div>
+                            <div class="event-card-body">
+                                <p>Traditional ceremony where turmeric paste is applied to the groom</p>
+                            </div>
+                            <div class="event-card-footer">
+                                <label class="toggle">
+                                    <input type="checkbox" class="event-toggle" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="event-card" data-event="wedding">
+                            <div class="event-card-header">
+                                <i class="fas fa-heart"></i>
+                                <h3>Wedding</h3>
+                            </div>
+                            <div class="event-card-body">
+                                <p>The main wedding ceremony</p>
+                            </div>
+                            <div class="event-card-footer">
+                                <label class="toggle">
+                                    <input type="checkbox" class="event-toggle" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="event-card" data-event="reception">
+                            <div class="event-card-header">
+                                <i class="fas fa-glass-cheers"></i>
+                                <h3>Reception</h3>
+                            </div>
+                            <div class="event-card-body">
+                                <p>Post-wedding celebration with family and friends</p>
+                            </div>
+                            <div class="event-card-footer">
+                                <label class="toggle">
+                                    <input type="checkbox" class="event-toggle" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="event-card add-custom-event">
+                            <div class="event-card-header">
+                                <i class="fas fa-plus"></i>
+                                <h3>Add Custom Event</h3>
+                            </div>
+                            <div class="event-card-body">
+                                <p>Add a custom event to your package</p>
+                            </div>
+                            <div class="event-card-footer">
+                                <button class="btn-secondary" id="add-custom-event-btn">Add Event</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Custom Event Modal -->
+                    <div class="modal" id="custom-event-modal">
+                        <div class="modal-content">
+                            <span class="close-modal">&times;</span>
+                            <h3>Add Custom Event</h3>
+                            <div class="form-group">
+                                <label for="custom-event-name">Event Name:</label>
+                                <input type="text" id="custom-event-name" placeholder="Enter event name">
+                            </div>
+                            <div class="form-group">
+                                <label for="custom-event-description">Description:</label>
+                                <textarea id="custom-event-description" placeholder="Enter event description"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="custom-event-icon">Icon:</label>
+                                <select id="custom-event-icon">
+                                    <option value="fas fa-star">Star</option>
+                                    <option value="fas fa-music">Music</option>
+                                    <option value="fas fa-utensils">Food</option>
+                                    <option value="fas fa-gift">Gift</option>
+                                    <option value="fas fa-bell">Bell</option>
+                                </select>
+                            </div>
+                            <div class="form-actions">
+                                <button class="btn-primary" id="save-custom-event">Save Event</button>
+                                <button class="btn-secondary close-modal-btn">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="btn-secondary prev-tab" data-prev="client-info"><i class="fas fa-arrow-left"></i> Previous</button>
+                        <button class="btn-primary next-tab" data-next="service-config">Next: Service Configuration <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Service Configuration Tab -->
+                <div class="tab-content" id="service-config">
+                    <h2><i class="fas fa-cog"></i> Service Configuration</h2>
+                    <p class="tab-description">Configure services for each selected event:</p>
+                    
+                    <div class="service-config-container">
+                        <div class="event-tabs">
+                            <!-- Event tabs will be dynamically generated here -->
+                        </div>
+                        
+                        <div class="event-service-config">
+                            <!-- Service configuration for each event will be shown here -->
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="btn-secondary prev-tab" data-prev="event-selection"><i class="fas fa-arrow-left"></i> Previous</button>
+                        <button class="btn-primary next-tab" data-next="additional-services">Next: Additional Services <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Additional Services Tab -->
+                <div class="tab-content" id="additional-services">
+                    <h2><i class="fas fa-plus-circle"></i> Additional Services</h2>
+                    <p class="tab-description">Select additional services to include in your package:</p>
+                    
+                    <div class="additional-services-container">
+                        <div class="service-card" data-service="albums">
+                            <div class="service-card-header">
+                                <i class="fas fa-book"></i>
+                                <h3>Premium Albums</h3>
+                            </div>
+                            <div class="service-card-body">
+                                <p>100 sheets for groom + 100 sheets for bride</p>
+                                <div class="price-control">
+                                    <label>Price:</label>
+                                    <input type="number" class="service-price" value="25000" min="0" step="1000">
+                                </div>
+                            </div>
+                            <div class="service-card-footer">
+                                <label class="toggle">
+                                    <input type="checkbox" class="service-toggle" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="service-card" data-service="full-length-videos">
+                            <div class="service-card-header">
+                                <i class="fas fa-film"></i>
+                                <h3>Full Length Videos</h3>
+                            </div>
+                            <div class="service-card-body">
+                                <p>Full length videos for all events</p>
+                                <div class="price-control">
+                                    <label>Price:</label>
+                                    <input type="number" class="service-price" value="30000" min="0" step="1000">
+                                </div>
+                            </div>
+                            <div class="service-card-footer">
+                                <label class="toggle">
+                                    <input type="checkbox" class="service-toggle" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="service-card" data-service="pre-post-shoot">
+                            <div class="service-card-header">
+                                <i class="fas fa-camera"></i>
+                                <h3>Pre/Post Wedding Shoot</h3>
+                            </div>
+                            <div class="service-card-body">
+                                <p>Complimentary pre or post wedding photoshoot</p>
+                                <div class="price-control">
+                                    <label>Price:</label>
+                                    <input type="number" class="service-price" value="20000" min="0" step="1000">
+                                </div>
+                            </div>
+                            <div class="service-card-footer">
+                                <label class="toggle">
+                                    <input type="checkbox" class="service-toggle" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="service-card" data-service="invitations">
+                            <div class="service-card-header">
+                                <i class="fas fa-envelope"></i>
+                                <h3>Invitations</h3>
+                            </div>
+                            <div class="service-card-body">
+                                <p>Invitations for Engagement, Wedding and Reception</p>
+                                <div class="price-control">
+                                    <label>Price:</label>
+                                    <input type="number" class="service-price" value="15000" min="0" step="1000">
+                                </div>
+                            </div>
+                            <div class="service-card-footer">
+                                <label class="toggle">
+                                    <input type="checkbox" class="service-toggle" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="service-card" data-service="promo-videos">
+                            <div class="service-card-header">
+                                <i class="fas fa-video"></i>
+                                <h3>Promo Videos</h3>
+                            </div>
+                            <div class="service-card-body">
+                                <p>Promo videos for all selected events</p>
+                                <div class="price-control">
+                                    <label>Price:</label>
+                                    <input type="number" class="service-price" value="40000" min="0" step="1000">
+                                </div>
+                            </div>
+                            <div class="service-card-footer">
+                                <label class="toggle">
+                                    <input type="checkbox" class="service-toggle" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="service-card add-custom-service">
+                            <div class="service-card-header">
+                                <i class="fas fa-plus"></i>
+                                <h3>Add Custom Service</h3>
+                            </div>
+                            <div class="service-card-body">
+                                <p>Add a custom service to your package</p>
+                            </div>
+                            <div class="service-card-footer">
+                                <button class="btn-secondary" id="add-custom-service-btn">Add Service</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Custom Service Modal -->
+                    <div class="modal" id="custom-service-modal">
+                        <div class="modal-content">
+                            <span class="close-modal">&times;</span>
+                            <h3>Add Custom Service</h3>
+                            <div class="form-group">
+                                <label for="custom-service-name">Service Name:</label>
+                                <input type="text" id="custom-service-name" placeholder="Enter service name">
+                            </div>
+                            <div class="form-group">
+                                <label for="custom-service-description">Description:</label>
+                                <textarea id="custom-service-description" placeholder="Enter service description"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="custom-service-price">Price:</label>
+                                <input type="number" id="custom-service-price" placeholder="Enter price" min="0" step="1000">
+                            </div>
+                            <div class="form-group">
+                                <label for="custom-service-icon">Icon:</label>
+                                <select id="custom-service-icon">
+                                    <option value="fas fa-star">Star</option>
+                                    <option value="fas fa-camera">Camera</option>
+                                    <option value="fas fa-video">Video</option>
+                                    <option value="fas fa-image">Image</option>
+                                    <option value="fas fa-palette">Design</option>
+                                </select>
+                            </div>
+                            <div class="form-actions">
+                                <button class="btn-primary" id="save-custom-service">Save Service</button>
+                                <button class="btn-secondary close-modal-btn">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="btn-secondary prev-tab" data-prev="service-config"><i class="fas fa-arrow-left"></i> Previous</button>
+                        <button class="btn-primary next-tab" data-next="package-details">Next: Package Details <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Package Details Tab -->
+                <div class="tab-content" id="package-details">
+                    <h2><i class="fas fa-box"></i> Package Details</h2>
+                    
+                    <div class="package-summary">
+                        <h3>Package Summary</h3>
+                        <div class="summary-section">
+                            <h4>Selected Events</h4>
+                            <ul id="selected-events-summary">
+                                <!-- Will be populated dynamically -->
+                            </ul>
+                        </div>
+                        
+                        <div class="summary-section">
+                            <h4>Selected Services</h4>
+                            <ul id="selected-services-summary">
+                                <!-- Will be populated dynamically -->
+                            </ul>
+                        </div>
+                        
+                        <div class="summary-section">
+                            <h4>Additional Services</h4>
+                            <ul id="additional-services-summary">
+                                <!-- Will be populated dynamically -->
+                            </ul>
+                        </div>
+                        
+                        <div class="summary-section">
+                            <h4>Equipment Information</h4>
+                            <ul>
+                                <li>Cameras used for video are Sony HD Cameras</li>
+                                <li>Candid videography will be done with Nikon Z8, Sony S3 or Sony FX3 (which contains slider, steadycam, 7 lenses)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="summary-section">
+                            <h4>Additional Notes</h4>
+                            <ul>
+                                <li>If couple shoot is out of Hyderabad, we will charge transport extra + accommodation + food</li>
+                                <li>We can also refer professional makeup artists on your request</li>
+                            </ul>
+                            <div class="form-group">
+                                <label for="custom-notes">Custom Notes:</label>
+                                <textarea id="custom-notes" placeholder="Add any custom notes for this quotation"></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="summary-section total-section">
+                            <h4>Total Package Cost</h4>
+                            <div class="total-container">
+                                <div class="form-group">
+                                    <label for="package-cost">Package Cost (₹):</label>
+                                    <input type="text" id="package-cost" value="3,50,000">
+                                </div>
+                                <p class="cost-note">(Including transport)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="btn-secondary prev-tab" data-prev="additional-services"><i class="fas fa-arrow-left"></i> Previous</button>
+                        <button class="btn-primary" id="generate-quote">Generate Quotation</button>
+                        <button class="btn-secondary" id="save-quote">Save Quotation</button>
+                    </div>
+                </div>
+
+                <!-- Saved Quotes Tab -->
+                <div class="tab-content" id="saved-quotes">
+                    <h2><i class="fas fa-save"></i> Saved Quotes</h2>
+                    <p class="tab-description">View and manage your saved quotations:</p>
+                    
+                    <div class="saved-quotes-container">
+                        <div class="quotes-list">
+                            <!-- Will be populated dynamically -->
+                            <p class="no-quotes-message">No saved quotations yet.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="btn-secondary prev-tab" data-prev="package-details"><i class="fas fa-arrow-left"></i> Previous</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quotation Output -->
+        <div id="quotation-output" class="quotation-output hidden">
+            <div class="quotation-header">
+                <button id="print-quote" class="btn-primary"><i class="fas fa-print"></i> Print Quotation</button>
+                <button id="download-pdf" class="btn-primary"><i class="fas fa-file-pdf"></i> Download PDF</button>
+                <button id="back-to-form" class="btn-secondary"><i class="fas fa-arrow-left"></i> Back to Form</button>
+            </div>
+            <div id="quotation-content" class="quotation-content">
+                <!-- Quotation will be generated here -->
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 Sumuhurtham Wedding Photography & Videography. All Rights Reserved.</p>
+            <p>Experienced, Creative & Professional Photographers in Hyderabad. With Over 10 Years of Experience.</p>
+        </footer>
+    </div>
+
+    <!-- Save Quote Modal -->
+    <div class="modal" id="save-quote-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Save Quotation</h3>
+            <div class="form-group">
+                <label for="quote-name">Quotation Name:</label>
+                <input type="text" id="quote-name" placeholder="Enter a name for this quotation">
+            </div>
+            <div class="form-actions">
+                <button class="btn-primary" id="confirm-save-quote">Save</button>
+                <button class="btn-secondary close-modal-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script-v2.js"></script>
+</body>
+</html>

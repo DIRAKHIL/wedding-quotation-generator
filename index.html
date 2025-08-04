@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumuhurtham - Wedding Photography & Videography Quotation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="logo.png" alt="Sumuhurtham Logo" class="logo">
+                <div class="logo-text">
+                    <h1>Sumuhurtham</h1>
+                    <p class="tagline">We Make Memories...</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <p>Experienced, Creative & Professional Photographers</p>
+                <p>Hyderabad | With Over 10 Years of Experience</p>
+                <p>Contact: <span id="contact-number">+91 XXXXXXXXXX</span></p>
+            </div>
+        </header>
+
+        <div class="quote-form">
+            <h2>Wedding Photography & Videography Quotation</h2>
+            
+            <div class="form-section">
+                <h3>Client Information</h3>
+                <div class="form-group">
+                    <label for="client-name">Client Name:</label>
+                    <input type="text" id="client-name" placeholder="Enter client name">
+                </div>
+                <div class="form-group">
+                    <label for="client-phone">Phone Number:</label>
+                    <input type="text" id="client-phone" placeholder="Enter phone number">
+                </div>
+                <div class="form-group">
+                    <label for="client-email">Email:</label>
+                    <input type="email" id="client-email" placeholder="Enter email address">
+                </div>
+                <div class="form-group">
+                    <label for="event-location">Event Location:</label>
+                    <input type="text" id="event-location" placeholder="Enter event location" value="Nellore">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Event Details</h3>
+                <div class="events-container">
+                    <div class="event-row header">
+                        <div class="event-cell">Date</div>
+                        <div class="event-cell">Time</div>
+                        <div class="event-cell">Event</div>
+                        <div class="event-cell">Traditional Still Camera</div>
+                        <div class="event-cell">Candid Photography</div>
+                        <div class="event-cell">4K Video</div>
+                        <div class="event-cell">LED Screens</div>
+                        <div class="event-cell">Drone</div>
+                        <div class="event-cell">Cinematic Video</div>
+                    </div>
+                    
+                    <!-- Engagement Row -->
+                    <div class="event-row">
+                        <div class="event-cell">
+                            <input type="date" id="engagement-date" class="date-input">
+                        </div>
+                        <div class="event-cell">
+                            <select id="engagement-time">
+                                <option value="Morning">Morning</option>
+                                <option value="Evening">Evening</option>
+                                <option value="Full Day">Full Day</option>
+                            </select>
+                        </div>
+                        <div class="event-cell">Engagement</div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="engagement-traditional" checked>
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="engagement-candid" checked>
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="engagement-4k" checked>
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="engagement-led">
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="engagement-drone">
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="engagement-cinematic" checked>
+                        </div>
+                    </div>
+                    
+                    <!-- Haldi Bride Row -->
+                    <div class="event-row">
+                        <div class="event-cell">
+                            <input type="date" id="haldi-bride-date" class="date-input">
+                        </div>
+                        <div class="event-cell">
+                            <select id="haldi-bride-time">
+                                <option value="Morning">Morning</option>
+                                <option value="Evening">Evening</option>
+                                <option value="Full Day">Full Day</option>
+                            </select>
+                        </div>
+                        <div class="event-cell">Haldi @ Bride</div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="haldi-bride-traditional" checked>
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="haldi-bride-candid">
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="haldi-bride-4k" checked>
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="haldi-bride-led">
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="haldi-bride-drone">
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="haldi-bride-cinematic">
+                        </div>
+                    </div>
+                    
+                    <!-- Haldi Groom Row -->
+                    <div class="event-row">
+                        <div class="event-cell">
+                            <input type="date" id="haldi-groom-date" class="date-input">
+                        </div>
+                        <div class="event-cell">
+                            <select id="haldi-groom-time">
+                                <option value="Morning">Morning</option>
+                                <option value="Evening">Evening</option>
+                                <option value="Full Day">Full Day</option>
+                            </select>
+                        </div>
+                        <div class="event-cell">Haldi @ Groom</div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="haldi-groom-traditional" checked>
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="haldi-groom-candid">
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="haldi-groom-4k" checked>
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="haldi-groom-led">
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="haldi-groom-drone">
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="haldi-groom-cinematic">
+                        </div>
+                    </div>
+                    
+                    <!-- Wedding Row -->
+                    <div class="event-row">
+                        <div class="event-cell">
+                            <input type="date" id="wedding-date" class="date-input">
+                        </div>
+                        <div class="event-cell">
+                            <select id="wedding-time">
+                                <option value="Morning">Morning</option>
+                                <option value="Evening">Evening</option>
+                                <option value="Full Day">Full Day</option>
+                            </select>
+                        </div>
+                        <div class="event-cell">Wedding</div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="wedding-traditional" checked>
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="wedding-candid" checked>
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="wedding-4k" checked>
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="wedding-led" checked>
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="wedding-drone" checked>
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="wedding-cinematic" checked>
+                        </div>
+                    </div>
+                    
+                    <!-- Reception Row -->
+                    <div class="event-row">
+                        <div class="event-cell">
+                            <input type="date" id="reception-date" class="date-input">
+                        </div>
+                        <div class="event-cell">
+                            <select id="reception-time">
+                                <option value="Morning">Morning</option>
+                                <option value="Evening" selected>Evening</option>
+                                <option value="Full Day">Full Day</option>
+                            </select>
+                        </div>
+                        <div class="event-cell">Reception</div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="reception-traditional" checked>
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="reception-candid" checked>
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="reception-4k" checked>
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="reception-led">
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="reception-drone">
+                        </div>
+                        <div class="event-cell">
+                            <input type="checkbox" id="reception-cinematic" checked>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Additional Services</h3>
+                <div class="additional-services">
+                    <div class="service-item">
+                        <input type="checkbox" id="albums" checked>
+                        <label for="albums">Premium Albums (100 sheets for groom + 100 sheets for bride)</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" id="full-length-videos" checked>
+                        <label for="full-length-videos">Full Length Videos for All Events</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" id="pre-post-shoot" checked>
+                        <label for="pre-post-shoot">Pre/Post Wedding Shoot (Complimentary)</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" id="invitations" checked>
+                        <label for="invitations">Invitations for Engagement, Wedding and Reception</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" id="engagement-promo" checked>
+                        <label for="engagement-promo">Engagement Promo Video</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" id="haldi-promo" checked>
+                        <label for="haldi-promo">Haldi Promo Video</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" id="wedding-promo" checked>
+                        <label for="wedding-promo">Wedding Promo Video</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" id="reception-promo" checked>
+                        <label for="reception-promo">Reception Promo Video</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Equipment Information</h3>
+                <div class="equipment-info">
+                    <p>• Cameras used for video are Sony HD Cameras</p>
+                    <p>• Candid videography will be done with Nikon Z8, Sony S3 or Sony FX3 (which contains slider, steadycam, 7 lenses)</p>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Package Details</h3>
+                <div class="form-group">
+                    <label for="package-cost">Package Cost (₹):</label>
+                    <input type="text" id="package-cost" value="3,50,000">
+                    <p class="cost-note">(Including transport)</p>
+                </div>
+                <div class="additional-notes">
+                    <p>• If couple shoot is out of Hyderabad, we will charge transport extra + accommodation + food</p>
+                    <p>• We can also refer professional makeup artists on your request</p>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button id="generate-quote" class="btn-primary">Generate Quotation</button>
+                <button id="reset-form" class="btn-secondary">Reset Form</button>
+            </div>
+        </div>
+
+        <div id="quotation-output" class="quotation-output hidden">
+            <div class="quotation-header">
+                <button id="print-quote" class="btn-primary">Print Quotation</button>
+                <button id="back-to-form" class="btn-secondary">Back to Form</button>
+            </div>
+            <div id="quotation-content" class="quotation-content">
+                <!-- Quotation will be generated here -->
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 Sumuhurtham Wedding Photography & Videography. All Rights Reserved.</p>
+            <p>Experienced, Creative & Professional Photographers in Hyderabad. With Over 10 Years of Experience.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
